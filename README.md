@@ -110,7 +110,7 @@ Finally, this module imports [iso-test](https://github.com/isysd-mirror/iso-test
 Since iso-test is a devDependency, gpm does not install it automatically. Before testing, install it with:
 
 ```
-gpm -n .. -t .. -u https -i . iso-test
+gpm -n .. -t .. -u https -i iso-test
 ```
 
 [Travis CI](https://travis-ci.org/isysd-mirror/iso-module-boilerplate) is integrated to test your code using chromium, chrome, firefox, and safari, on linux, osx, and windows.
