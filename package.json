@@ -6,7 +6,7 @@
   "module": "index.js",
   "scripts": {
     "test": "iso-test test.js",
-    "preinstall": "gpm -n .. -t .. -u https -e -i .",
+    "preinstall": "gpm -n .. -t .. -u https -i .",
     "postinstall": "node -e \"try { require('../esm/esm.js')(module); } catch (e) {require('child_process').execSync('npm i', {cwd: require('path').join('..', 'esm')})}\""
   },
   "author": "isysd",

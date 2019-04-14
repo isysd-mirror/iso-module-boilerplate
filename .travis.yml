@@ -1,5 +1,6 @@
 before_install:
-  - npm i -g https://github.com/isysd-mirror/gpm.git
+  - npm i -g https://github.com/isysd-mirror/gpm.git#isysd
+  - gpm -n .. -t .. -u https -i . iso-test
 matrix:
   include:
   - os: linux
@@ -37,7 +38,8 @@ matrix:
     env: BROWSER=google-chrome-stable HEADLESS=1 TEST_TIMEOUT=10000
     before_install:
       - choco install googlechrome
-      - npm i -g https://github.com/isysd-mirror/gpm.git
+      - npm i -g https://github.com/isysd-mirror/gpm.git#isysd
+      - gpm -n .. -t .. -u https -i . iso-test
 
 # 
 # Firefox and Chromium not working on Windows, for some reason :/

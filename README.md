@@ -86,10 +86,10 @@ $ ls ..
 iso-module-boilerplate
 ```
 
-##### Step 3 preinstall using gpm
+##### Step 3 npm install
 
 ```shell
-$ gpm -n .. -t .. -u https -e -i .
+$ npm install
 
 # List of files in parent (/js) directory no includes esm and iso-test repositories from git, as well as their dependencies
 $ ls ..
@@ -105,5 +105,11 @@ lrwxrwxrwx 1 isysd isysd 14 Apr 14 00:34 iso-test -> ../../iso-test
 ### Test Everywhere
 
 Finally, this module imports [iso-test](https://github.com/isysd-mirror/iso-test) to run the same test code in both NodeJS as well as the browser of your choice. Write your unit test in test.js and call `finishTest` with the result. Anything beginning with "pass" will pass, everything else will fail, including uncaught errors.
+
+Since iso-test is a devDependency, gpm does not install it automatically. Before testing, install it with:
+
+```
+gpm -n .. -t .. -u https -i . iso-test
+```
 
 [Travis CI](https://travis-ci.org/isysd-mirror/iso-module-boilerplate) is integrated to test your code using chromium, chrome, firefox, and safari, on linux, osx, and windows.
