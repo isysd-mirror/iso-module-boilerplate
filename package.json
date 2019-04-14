@@ -1,0 +1,38 @@
+{
+  "name": "iso-module-boilerplate",
+  "version": "1.0.0",
+  "description": "Isomorphic (ES6 + NodeJS) module boilerplate, with test framework integration.",
+  "main": "index.node.js",
+  "module": "index.js",
+  "scripts": {
+    "test": "iso-test test.js",
+    "preinstall": "gpm -n .. -t .. -u https -e -i .",
+    "postinstall": "node -e \"try { require('../esm/esm.js')(module); } catch (e) {require('child_process').execSync('npm i', {cwd: require('path').join('..', 'esm')})}\""
+  },
+  "author": "isysd",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "../esm"
+  },
+  "devDependencies": {
+    "iso-test": "../iso-test"
+  },
+  "peerDependencies": {
+    "gpm": "https://github.com/isysd-mirror/gpm.git#isysd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isysd-mirror/iso-module-boilerplate.git"
+  },
+  "keywords": [
+    "isomorphic",
+    "es6",
+    "esm",
+    "module",
+    "boilerplate"
+  ],
+  "bugs": {
+    "url": "https://github.com/isysd-mirror/iso-module-boilerplate/issues"
+  },
+  "homepage": "https://github.com/isysd-mirror/iso-module-boilerplate#readme"
+}
