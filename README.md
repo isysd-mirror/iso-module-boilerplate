@@ -6,7 +6,8 @@ Isomorphic (ES6 + NodeJS) module boilerplate, with test framework integration.
  + Install and build source code from git, not [npm, bower, centralized package manager].
  + Support a flat directory structure.
  + Also support `node_modules` folders for backwards compatability.
- + Run the same unit tests in NodeJS as well as the browser of your choice.
+ + Run the same unit tests in NodeJS as well as browsers
+ + Run unit tests against every browser and OS (on travis-ci.org)
 
 ### ES6 + NodeJS Module
 
