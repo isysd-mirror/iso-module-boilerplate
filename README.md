@@ -1,5 +1,7 @@
 # iso-module-boilerplate
 
+[![Build Status](https://travis-ci.org/isysd-mirror/iso-module-boilerplate.svg?branch=isysd)](https://travis-ci.org/isysd-mirror/iso-module-boilerplate)
+
 Isomorphic (ES6 + NodeJS) module boilerplate, with test framework integration.
 
  + Module written in ES6, but also available in NodeJS.
@@ -43,10 +45,10 @@ npm i -g https://github.com/isysd-mirror/gpm#isysd
 After this, npm can be used as normal, since gpm is set in the `preinstall` hook in package.json.
 
 ```
-gpm -n .. -t .. -u https -e -i .
+gpm -n .. -t .. -u https -i .
 ```
 
-This `preinstall` hook will install dependencies and devDendencies to the parent directory (..), preferring https to ssh as a git protocol.
+This `preinstall` hook will install dependencies to the parent directory (..), preferring https to ssh as a git protocol.
 
 A `postinstall` hook is currently required to ensure that the esm package is built, since the git branch does not include the build directory. The script is prettified here for your convenience.
 
