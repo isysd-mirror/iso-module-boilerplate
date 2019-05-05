@@ -1,6 +1,6 @@
 {
   "name": "iso-module-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Isomorphic (ES6 + NodeJS) module boilerplate, with test framework integration.",
   "main": "index.node.js",
   "module": "index.js",
@@ -18,11 +18,11 @@
     "iso-test": "../iso-test"
   },
   "peerDependencies": {
-    "gpm": "https://github.com/isysd-mirror/gpm.git#isysd"
+    "@isysd/gpm": "https://iramiller.com/src/js/gpm/.git"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/isysd-mirror/iso-module-boilerplate.git"
+    "url": "https://iramiller.com/src/js/iso-module-boilerplate/.git"
   },
   "keywords": [
     "isomorphic",
@@ -34,5 +34,5 @@
   "bugs": {
     "url": "https://github.com/isysd-mirror/iso-module-boilerplate/issues"
   },
-  "homepage": "https://github.com/isysd-mirror/iso-module-boilerplate#readme"
+  "homepage": "https://iramiller.com/src/js/iso-module-boilerplate/"
 }

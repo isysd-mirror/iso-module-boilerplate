@@ -4,51 +4,50 @@ before_install:
 matrix:
   include:
   - os: linux
-    env: BROWSER=chromium-browser HEADLESS=1 TEST_TIMEOUT=5000
+    env: BROWSER=chromium-browser HEADLESS=1
     addons:
       apt:
         packages: chromium-browser
   - os: linux
-    env: BROWSER=google-chrome-stable HEADLESS=1 TEST_TIMEOUT=5000
+    env: BROWSER=google-chrome-stable HEADLESS=1
     addons:
       chrome: "stable"
   - os: linux
-    env: BROWSER=firefox MOZ_HEADLESS=1 TEST_TIMEOUT=5000
+    env: BROWSER=firefox MOZ_HEADLESS=1
     addons:
       firefox: "latest"
   - os: osx
-    env: BROWSER=chromium-browser HEADLESS=1 TEST_TIMEOUT=5000
+    env: BROWSER=chromium-browser HEADLESS=1
     addons:
       homebrew:
         casks: chromium
   - os: osx
-    env: BROWSER=google-chrome-stable HEADLESS=1 TEST_TIMEOUT=5000
+    env: BROWSER=google-chrome-stable HEADLESS=1
     addons:
       chrome: "stable"
   - os: osx
-    env: BROWSER=firefox MOZ_HEADLESS=1 TEST_TIMEOUT=5000
+    env: BROWSER=firefox MOZ_HEADLESS=1
     addons:
       firefox: "latest"
   - os: osx
-    env: BROWSER=safari HEADLESS=1 TEST_TIMEOUT=5000
+    env: BROWSER=safari HEADLESS=1
     addons:
       homebrew:
         casks: safari
   - os: windows
-    env: BROWSER=google-chrome-stable HEADLESS=1 TEST_TIMEOUT=10000
+    env: BROWSER=google-chrome-stable HEADLESS=1
     before_install:
       - choco install googlechrome
       - npm i -g https://github.com/isysd-mirror/gpm.git#isysd
       - gpm -n .. -t .. -u https -i iso-test
-
 # 
 # Firefox and Chromium not working on Windows, for some reason :/
 #
 #  - os: windows
-#    env: BROWSER=chromium-browser HEADLESS=1 TEST_TIMEOUT=10000 DEBUG=1
+#    env: BROWSER=chromium-browser HEADLESS=1
 #    before_install: choco install chromium
 #  - os: windows
-#    env: BROWSER=firefox HEADLESS=1 TEST_TIMEOUT=10000 DEBUG=1
+#    env: BROWSER=firefox HEADLESS=1
 #    before_install: choco install firefox
 language: node_js
 node_js:
