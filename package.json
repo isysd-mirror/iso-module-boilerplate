@@ -1,6 +1,6 @@
 {
   "name": "iso-module-boilerplate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Isomorphic (ES6 + NodeJS) module boilerplate, with test framework integration.",
   "main": "index.node.js",
   "module": "index.js",
