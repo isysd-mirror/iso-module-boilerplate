@@ -12,17 +12,18 @@
   "author": "isysd",
   "license": "MIT",
   "dependencies": {
+    "@isysd/gpm": "file:../gpm",
     "esm": "../esm"
   },
   "devDependencies": {
     "iso-test": "../iso-test"
   },
   "peerDependencies": {
-    "@isysd/gpm": "https://iramiller.com/src/js/gpm/.git"
+    "@isysd/gpm": "https://github.com/isysd-mirror/gpm.git"
   },
   "repository": {
     "type": "git",
-    "url": "https://iramiller.com/src/js/iso-module-boilerplate/.git"
+    "url": "https://github.com/isysd-mirror/iso-module-boilerplate.git"
   },
   "keywords": [
     "isomorphic",
@@ -34,5 +35,5 @@
   "bugs": {
     "url": "https://github.com/isysd-mirror/iso-module-boilerplate/issues"
   },
-  "homepage": "https://iramiller.com/src/js/iso-module-boilerplate/"
+  "homepage": "https://github.com/isysd-mirror/iso-module-boilerplate/"
 }
