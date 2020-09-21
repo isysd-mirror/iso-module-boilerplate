@@ -1,6 +1,6 @@
 {
   "name": "iso-module-boilerplate",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Isomorphic (ES6 + NodeJS) module boilerplate, with test framework integration.",
   "main": "index.node.js",
   "module": "index.js",
@@ -18,7 +18,7 @@
     "iso-test": "../iso-test"
   },
   "peerDependencies": {
-    "gpm": "https://github.com/isysd-mirror/gpm.git"
+    "gpm": "https://github.com/IonicaBizau/gpm.git"
   },
   "repository": {
     "type": "git",

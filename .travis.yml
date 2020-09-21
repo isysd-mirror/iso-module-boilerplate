@@ -1,46 +1,48 @@
 before_install:
-  - npm i -g https://github.com/isysd-mirror/gpm.git#isysd
-  - gpm -n .. -t .. -u https -i iso-test
+  - npm i -g https://github.com/IonicaBizau/gpm.git
+  - gpm -n .. -t .. -u https -d 1 -i iso-test
+install:
+  - npm i
 matrix:
   include:
   - os: linux
-    env: BROWSER=chromium-browser HEADLESS=1
+    env: BROWSER=chromium-browser HEADLESS=1 NODE_ENV=development
     addons:
       apt:
         packages: chromium-browser
   - os: linux
-    env: BROWSER=google-chrome-stable HEADLESS=1
+    env: BROWSER=google-chrome-stable HEADLESS=1 NODE_ENV=development
     addons:
       chrome: "stable"
   - os: linux
-    env: BROWSER=firefox MOZ_HEADLESS=1
+    env: BROWSER=firefox MOZ_HEADLESS=1 NODE_ENV=development
     addons:
       firefox: "latest"
   - os: osx
-    env: BROWSER=chromium-browser HEADLESS=1
+    env: BROWSER=chromium-browser HEADLESS=1 NODE_ENV=development
     addons:
       homebrew:
         casks: chromium
   - os: osx
-    env: BROWSER=google-chrome-stable HEADLESS=1
+    env: BROWSER=google-chrome-stable HEADLESS=1 NODE_ENV=development
     addons:
       chrome: "stable"
   - os: osx
-    env: BROWSER=firefox MOZ_HEADLESS=1
+    env: BROWSER=firefox MOZ_HEADLESS=1 NODE_ENV=development
     addons:
       firefox: "latest"
   - os: osx
-    env: BROWSER=safari HEADLESS=1
+    env: BROWSER=safari HEADLESS=1 NODE_ENV=development
     addons:
       homebrew:
         casks: safari
   - os: windows
-    env: BROWSER=google-chrome-stable HEADLESS=1
+    env: BROWSER=google-chrome-stable HEADLESS=1 NODE_ENV=development
     before_install:
       - choco install googlechrome
-      - npm i -g https://github.com/isysd-mirror/gpm.git#isysd
-      - gpm -n .. -t .. -u https -i iso-test
-# 
+      - npm i -g https://github.com/IonicaBizau/gpm.git
+      - gpm -n .. -t .. -u https -d 1 -i iso-test
+
 # Firefox and Chromium not working on Windows, for some reason :/
 #
 #  - os: windows
