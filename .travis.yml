@@ -18,11 +18,11 @@ matrix:
     env: BROWSER=firefox MOZ_HEADLESS=1 NODE_ENV=development
     addons:
       firefox: "latest"
-  - os: osx
-    env: BROWSER=chromium-browser HEADLESS=1 NODE_ENV=development
-    addons:
-      homebrew:
-        casks: chromium
+#  - os: osx
+#    env: BROWSER=chromium-browser HEADLESS=1
+#    addons:
+#      homebrew:
+#        casks: chromium
   - os: osx
     env: BROWSER=google-chrome-stable HEADLESS=1 NODE_ENV=development
     addons:
